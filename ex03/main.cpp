@@ -144,10 +144,10 @@ int main(void)
     try
     {
         Intern                  intern;
-        Bureaucrat              tom;
-        ShrubberyCreationForm   *shrub = new ShrubberyCreationForm;
+        // Bureaucrat              tom;
+        // ShrubberyCreationForm   *shrub = new ShrubberyCreationForm;
 
-        intern.makeForm(shrub, tom);
+        intern.makeForm("shrub", "tom");
     }
     catch(const std::exception& e)
     {

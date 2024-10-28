@@ -16,7 +16,7 @@ class Intern
         ~Intern();
         //Intern&  operator=(const Intern& obj);
         
-        AForm    *makeForm(AForm *form, Bureaucrat target);
+        void    makeForm(std::string form, std::string target);
 };
 
 #endif

@@ -28,8 +28,8 @@ Intern::~Intern()
 //     return (*this);
 // }
 
-AForm    *Intern::makeForm(AForm *form, Bureaucrat target)
+void    Intern::makeForm(std::string form, std::string target)
 {
-    std::cout << "Intern creates " << form->getName() << " for " << target.getName() << std::endl;
-    return (form);
+    std::cout << "Intern creates " << form << " for " << target << std::endl;
+    //return (signed_form); //This should return a pointer to the signed form
 }

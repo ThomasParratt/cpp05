@@ -3,6 +3,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.cpp"
+#include "Intern.hpp"
 
 int main(void)
 {
@@ -115,25 +116,38 @@ int main(void)
     // {
     //     std::cerr << e.what() << std::endl;
     // }
-    std::cout << std::endl << "-----TRYING TO EXECUTE USING executeForm()----" << std::endl << std::endl;
+    // std::cout << std::endl << "-----TRYING TO EXECUTE USING executeForm()----" << std::endl << std::endl;
+    // try
+    // {
+    //     Bureaucrat  tom("Tom", 20);
+
+    //     std::cout << tom << std::endl;
+
+    //     ShrubberyCreationForm   shrub("Tom");
+    //     RobotomyRequestForm     robo("Tom");
+    //     PresidentialPardonForm  pardon("Tom");
+
+    //     shrub.beSigned(tom);
+    //     tom.executeForm(shrub);
+
+    //     robo.beSigned(tom);
+    //     tom.executeForm(robo);
+
+    //     pardon.beSigned(tom);
+    //     tom.executeForm(pardon);
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << std::endl;
+    // }
+    std::cout << std::endl << "-----INTERN TEST----" << std::endl << std::endl;
     try
     {
-        Bureaucrat  tom("Tom", 20);
+        Intern                  intern;
+        Bureaucrat              tom;
+        ShrubberyCreationForm   *shrub = new ShrubberyCreationForm;
 
-        std::cout << tom << std::endl;
-
-        ShrubberyCreationForm   shrub("Tom");
-        RobotomyRequestForm     robo("Tom");
-        PresidentialPardonForm  pardon("Tom");
-
-        shrub.beSigned(tom);
-        tom.executeForm(shrub);
-
-        robo.beSigned(tom);
-        tom.executeForm(robo);
-
-        pardon.beSigned(tom);
-        tom.executeForm(pardon);
+        intern.makeForm(shrub, tom);
     }
     catch(const std::exception& e)
     {

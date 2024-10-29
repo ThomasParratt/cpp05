@@ -1,6 +1,6 @@
 #include "AForm.hpp"
 
-AForm::AForm() : name("AForm_name"), isSigned(0), gradeToSign(0), gradeToExecute(0)
+AForm::AForm() : name("AForm_name"), isSigned(false), gradeToSign(0), gradeToExecute(0)
 {
     std::cout << "AForm default constructor called" << std::endl;
 }
@@ -10,7 +10,7 @@ AForm::AForm(const AForm& obj) : name(obj.name), isSigned(obj.isSigned), gradeTo
     std::cout << "AForm copy constructor called" << std::endl;
 }
 
-AForm::AForm(int gradeToSign, int gradeToExecute) : name("AForm_name"), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute)
+AForm::AForm(std::string name, int gradeToSign, int gradeToExecute) : name(name), isSigned(false), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute)
 {
     std::cout << "AForm constructor called" << std::endl;
     if (gradeToSign > 150 || gradeToExecute > 150)

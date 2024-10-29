@@ -1,8 +1,8 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.cpp"
+//#include "RobotomyRequestForm.hpp"
+//#include "PresidentialPardonForm.cpp"
 
 int main(void)
 {
@@ -123,17 +123,17 @@ int main(void)
         std::cout << tom << std::endl;
 
         ShrubberyCreationForm   shrub("Tom");
-        RobotomyRequestForm     robo("Tom");
-        PresidentialPardonForm  pardon("Tom");
+        //RobotomyRequestForm     robo("Tom");
+        //PresidentialPardonForm  pardon("Tom");
 
         shrub.beSigned(tom);
         tom.executeForm(shrub);
 
-        robo.beSigned(tom);
-        tom.executeForm(robo);
+        //robo.beSigned(tom);
+        //tom.executeForm(robo);
 
-        pardon.beSigned(tom);
-        tom.executeForm(pardon);
+        //pardon.beSigned(tom);
+        //tom.executeForm(pardon);
     }
     catch(const std::exception& e)
     {

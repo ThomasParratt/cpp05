@@ -11,10 +11,10 @@ class ShrubberyCreationForm : public AForm
         std::string target;
     public:
         ShrubberyCreationForm();
-        //ShrubberyCreationForm(const ShrubberyCreationForm& obj);
+        ShrubberyCreationForm(const ShrubberyCreationForm& obj);
         ShrubberyCreationForm(std::string target);
         ~ShrubberyCreationForm();
-        //ShrubberyCreationForm&  operator=(const ShrubberyCreationForm& obj);
+        ShrubberyCreationForm&  operator=(const ShrubberyCreationForm& obj);
 
         int    execute(Bureaucrat const & executor) const;
 };

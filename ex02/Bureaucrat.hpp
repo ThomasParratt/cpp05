@@ -4,6 +4,8 @@
 # include <iostream>
 # include "AForm.hpp"
 
+class AForm;
+
 class Bureaucrat
 {
     private:
@@ -19,7 +21,7 @@ class Bureaucrat
         int             getGrade() const;
         void            incrementGrade();
         void            decrementGrade();
-        void            Bureaucrat::executeForm(AForm const & form);
+        void            executeForm(AForm const & form);
 
         class GradeTooHighException : public std::exception
         {

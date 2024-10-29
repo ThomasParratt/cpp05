@@ -7,16 +7,16 @@
 class Form
 {
     private:
-        const std::string   name; //subject specifies it should have a constant name. But this can't be copied
+        const std::string   name;
         bool                isSigned;
         const int           gradeToSign;
         const int           gradeToExecute;
     public:
         Form();
-        //Form(const Form& obj);
-        Form(int gradeToSign, int gradeToExecute);
+        Form(const Form& obj);
+        Form(std::string name, int gradeToSign, int gradeToExecute);
         ~Form();
-        //Form&  operator=(const Form& obj);
+        Form&  operator=(const Form& obj);
         std::string     getName() const;
         bool            getIsSigned() const;
         int             getGradeToSign() const;

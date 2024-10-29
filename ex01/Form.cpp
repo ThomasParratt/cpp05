@@ -1,17 +1,16 @@
 #include "Form.hpp"
 
-Form::Form() : name("Form_name"), isSigned(0), gradeToSign(0), gradeToExecute(0)
+Form::Form() : name("default_form"), isSigned(false), gradeToSign(0), gradeToExecute(0)
 {
     std::cout << "Form default constructor called" << std::endl;
 }
 
-// Form::Form(const Form& obj)
-// {
-//     std::cout << "Form copy constructor called" << std::endl;
-//     *this = obj;
-// }
+Form::Form(const Form& obj) : name(obj.name), isSigned(obj.isSigned), gradeToSign(obj.gradeToSign), gradeToExecute(obj.gradeToExecute)
+{
+    std::cout << "Form copy constructor called" << std::endl;
+}
 
-Form::Form(int gradeToSign, int gradeToExecute) : name("Form_name"), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute)
+Form::Form(std::string name, int gradeToSign, int gradeToExecute) : name(name), isSigned(false), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute)
 {
     std::cout << "Form constructor called" << std::endl;
     if (gradeToSign > 150 || gradeToExecute > 150)
@@ -25,17 +24,17 @@ Form::~Form()
     std::cout << "Form deconstructor called" << std::endl;
 }
 
-// Form&  Form::operator=(const Form& obj)
-// {
-//     std::cout << "Form copy assignment operator called" << std::endl;
-//     if (this != &obj)
-//     {
-//         this->name = obj.name + "_copy";
-//         this->isSigned = obj.isSigned;
-//         this->gradeToSign = obj.gradeToSign; // can't copy because it's constant...
-//     }
-//     return (*this);
-// }
+Form&  Form::operator=(const Form& obj)
+{
+    std::cout << "Form copy assignment operator called" << std::endl;
+    if (this != &obj)
+    {
+        //this->name = obj.name + "_copy";
+        this->isSigned = obj.isSigned;
+        //this->gradeToSign = obj.gradeToSign; // can't copy because it's constant...
+    }
+    return (*this);
+}
 
 std::string   Form::getName() const
 {
@@ -60,7 +59,7 @@ int     Form::getGradeToExecute() const
 void    Form::beSigned(Bureaucrat& obj)
 {
     if (obj.getGrade() < this->gradeToSign)
-        this->isSigned = 1;
+        this->isSigned = true;
     else
         GradeTooLowException();
 }

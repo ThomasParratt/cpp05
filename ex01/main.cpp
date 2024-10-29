@@ -81,10 +81,11 @@ int main(void)
     // }
 
     Bureaucrat  tom("Tom", 20);
-    Form    Form_1(50, 50);
+    Form    form_1("Form_1", 50, 50);
 
     std::cout << tom << std::endl;
-    std::cout << Form_1 << std::endl;
-    Form_1.beSigned(tom);
-    Form_1.signForm(tom);
+    std::cout << form_1 << std::endl;
+    form_1.beSigned(tom);
+    form_1.signForm(tom);
+    std::cout << form_1 << std::endl;
 }

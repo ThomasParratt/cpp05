@@ -60,6 +60,12 @@ void    Bureaucrat::decrementGrade()
         throw GradeTooLowException();
 }
 
+void    Bureaucrat::executeForm(AForm const & form)
+{
+    if (!form.execute(*this))
+        std::cout << this->name << " executed " << form.getName() << std::endl;
+}
+
 const char* Bureaucrat::GradeTooHighException::what() const noexcept
 {
     return ("Grade is too high!");

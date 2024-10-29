@@ -6,26 +6,26 @@
 
 class Bureaucrat;
 
-class AForm // this needs to be made into an abstract class
+class AForm
 {
     protected:
-        const std::string   name; //subject specifies it should have a constant name. But this can't be copied
+        const std::string   name;
         bool                isSigned;
-        int                 gradeToSign;    //should this be const?
-        int                 gradeToExecute; //should this be const?
+        const int           gradeToSign;
+        const int           gradeToExecute;
     public:
         AForm();
-        //AForm(const AForm& obj);
+        AForm(const AForm& obj);
         AForm(int gradeToSign, int gradeToExecute);
         virtual ~AForm();
-        //AForm&  operator=(const AForm& obj);
+        AForm&  operator=(const AForm& obj);
         std::string     getName() const;
         bool            getIsSigned() const;
         int             getGradeToSign() const;
         int             getGradeToExecute() const;
 
         void            beSigned(Bureaucrat& obj);
-        void            signAForm(Bureaucrat& obj);
+        void            signForm(Bureaucrat& obj);
 
         virtual int    execute(Bureaucrat const & executor) const = 0;
 

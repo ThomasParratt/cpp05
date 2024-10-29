@@ -6,7 +6,7 @@
 class Bureaucrat
 {
     private:
-        std::string     name; //subject specifies it should have a constant name. But this can't be copied.
+        const std::string     name; //subject specifies it should have a constant name. But this can't be copied.
         int             grade;
     public:
         Bureaucrat();

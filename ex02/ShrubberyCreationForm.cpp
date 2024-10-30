@@ -41,7 +41,7 @@ ShrubberyCreationForm&  ShrubberyCreationForm::operator=(const ShrubberyCreation
 
 int    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-    if (this->isSigned == 1 && executor.getGrade() <= 137)
+    if (this->isSigned == true && executor.getGrade() <= 137)
     {
         std::ofstream   file(this->target + "_shrubbery");
 
@@ -60,7 +60,7 @@ int    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     }
     else
     {
-        if (this->isSigned == 0)
+        if (this->isSigned == false)
             std::cout << "Form is not signed, cannot execute" << std::endl;
         if (executor.getGrade() > 137)
             throw GradeTooLowException();

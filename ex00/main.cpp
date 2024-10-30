@@ -14,7 +14,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----DECREMENT GRADE FROM 1 to 0-----" << std::endl << std::endl;
+    std::cout << std::endl << "-----INCREMENT GRADE FROM 1 to 0-----" << std::endl << std::endl;
     try
     {
         Bureaucrat  tom("Tom", 1);
@@ -26,7 +26,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----DECREMENT GRADE FROM 2 to 1-----" << std::endl << std::endl;
+    std::cout << std::endl << "-----INCREMENT GRADE FROM 2 to 1-----" << std::endl << std::endl;
     try
     {
         Bureaucrat  tom("Tom", 2);

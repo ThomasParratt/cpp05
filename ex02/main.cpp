@@ -122,7 +122,7 @@ int main(void)
 
         std::cout << tom << std::endl;
 
-        ShrubberyCreationForm   shrub("Tom");
+        ShrubberyCreationForm   shrub("home");
         //RobotomyRequestForm     robo("Tom");
         //PresidentialPardonForm  pardon("Tom");
 

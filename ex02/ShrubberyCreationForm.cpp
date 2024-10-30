@@ -2,19 +2,20 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 145, 137)
 {
-    this->target = "ShrubberyCreationForm";
+    this->target = "default_target";
     std::cout << "ShrubberyCreationForm default constructor called" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& obj) : AForm(obj.target, 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& obj) : AForm("ShrubberyCreationForm", 145, 137)
 {
-    this->target = "ShrubberyCreationForm";
+    this->target = obj.target;
     std::cout << "ShrubberyCreationForm copy constructor called" << std::endl;
     //*this = obj;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm(target, 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("ShrubberyCreationForm", 145, 137)
 {
+    this->target = target;
     std::cout << "ShrubberyCreationForm constructor called" << std::endl;
     // if (gradeToSign > 150 || gradeToExecute > 150)
     //     throw GradeTooLowException();

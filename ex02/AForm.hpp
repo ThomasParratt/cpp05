@@ -8,7 +8,7 @@ class Bureaucrat;
 
 class AForm
 {
-    protected:
+    protected: // should this be private? Is that what the evaluation form wants?
         const std::string   name;
         bool                isSigned;
         const int           gradeToSign;

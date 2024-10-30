@@ -29,9 +29,7 @@ Form&  Form::operator=(const Form& obj)
     std::cout << "Form copy assignment operator called" << std::endl;
     if (this != &obj)
     {
-        //this->name = obj.name + "_copy";
         this->isSigned = obj.isSigned;
-        //this->gradeToSign = obj.gradeToSign; // can't copy because it's constant...
     }
     return (*this);
 }

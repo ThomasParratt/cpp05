@@ -9,8 +9,8 @@ class AForm;
 class Bureaucrat
 {
     private:
-        std::string     name; //subject specifies it should have a constant name. But this can't be copied.
-        int             grade;
+        const std::string   name;
+        int                 grade;
     public:
         Bureaucrat();
         Bureaucrat(const Bureaucrat& obj);
@@ -21,8 +21,7 @@ class Bureaucrat
         int             getGrade() const;
         void            incrementGrade();
         void            decrementGrade();
-
-        void            executeForm(AForm const & form); 
+        void            executeForm(AForm const & form);
 
         class GradeTooHighException : public std::exception
         {

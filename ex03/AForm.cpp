@@ -1,17 +1,16 @@
 #include "AForm.hpp"
 
-AForm::AForm() : name("AForm_name"), isSigned(0), gradeToSign(0), gradeToExecute(0)
+AForm::AForm() : name("AForm_name"), isSigned(false), gradeToSign(0), gradeToExecute(0)
 {
     std::cout << "AForm default constructor called" << std::endl;
 }
 
-// AForm::AForm(const AForm& obj)
-// {
-//     std::cout << "AForm copy constructor called" << std::endl;
-//     *this = obj;
-// }
+AForm::AForm(const AForm& obj) : name(obj.name), isSigned(obj.isSigned), gradeToSign(obj.gradeToSign), gradeToExecute(obj.gradeToExecute)
+{
+    std::cout << "AForm copy constructor called" << std::endl;
+}
 
-AForm::AForm(int gradeToSign, int gradeToExecute) : name("AForm_name"), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute)
+AForm::AForm(std::string name, int gradeToSign, int gradeToExecute) : name(name), isSigned(false), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute)
 {
     std::cout << "AForm constructor called" << std::endl;
     if (gradeToSign > 150 || gradeToExecute > 150)
@@ -25,17 +24,17 @@ AForm::~AForm()
     std::cout << "AForm deconstructor called" << std::endl;
 }
 
-// AForm&  AForm::operator=(const AForm& obj)
-// {
-//     std::cout << "AForm copy assignment operator called" << std::endl;
-//     if (this != &obj)
-//     {
-//         this->name = obj.name + "_copy";
-//         this->isSigned = obj.isSigned;
-//         this->gradeToSign = obj.gradeToSign; // can't copy because it's constant...
-//     }
-//     return (*this);
-// }
+AForm&  AForm::operator=(const AForm& obj)
+{
+    std::cout << "AForm copy assignment operator called" << std::endl;
+    if (this != &obj)
+    {
+        //this->name = obj.name + "_copy";
+        this->isSigned = obj.isSigned;
+        //this->gradeToSign = obj.gradeToSign; // can't copy because it's constant...
+    }
+    return (*this);
+}
 
 std::string   AForm::getName() const
 {
@@ -65,7 +64,7 @@ void    AForm::beSigned(Bureaucrat& obj)
         GradeTooLowException();
 }
 
-void    AForm::signAForm(Bureaucrat& obj)
+void    AForm::signForm(Bureaucrat& obj)
 {
     if (this->isSigned)
         std::cout << obj.getName() << " signed " << this->name << std::endl;

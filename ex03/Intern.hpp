@@ -4,8 +4,6 @@
 # include <iostream>
 # include "AForm.hpp"
 
-class Bureaucrat;
-
 class Intern
 {
     private:
@@ -16,7 +14,10 @@ class Intern
         ~Intern();
         //Intern&  operator=(const Intern& obj);
         
-        void    makeForm(std::string form, std::string target);
+        AForm   *makeShrubberyCreationForm(std::string target);
+        AForm   *makeRobotomyRequestForm(std::string target);
+        AForm   *makePresidentialPardonForm(std::string target);
+        AForm   *makeForm(std::string form, std::string target);
 };
 
 #endif

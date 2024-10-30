@@ -28,8 +28,29 @@ Intern::~Intern()
 //     return (*this);
 // }
 
-void    Intern::makeForm(std::string form, std::string target)
+AForm   *makeShrubberyCreationForm(std::string target)
 {
+
+}
+
+AForm   *makeRobotomyRequestForm(std::string target)
+{
+
+}
+
+AForm   *makePresidentialPardonForm(std::string target)
+{
+    
+}
+
+AForm    *Intern::makeForm(std::string form, std::string target)
+{
+    if (form == "ShrubberyCreationForm")
+        makeShrubberyCreationForm(target);
+    if (form == "RobotomyCreationForm")
+        makeRobotomyRequestForm(target);
+    if (form == "PresidentialPardonForm")
+        makePresidentialPardonForm(target);
     std::cout << "Intern creates " << form << " for " << target << std::endl;
     //return (signed_form); //This should return a pointer to the signed form
 }

@@ -1,29 +1,21 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : target("RobotomyRequestForm_target")
+RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45)
 {
-    this->isSigned = 0;
-    this->gradeToSign = 72;
-    this-> gradeToExecute = 45;
+    this->target = "robotomy_target";
     std::cout << "RobotomyRequestForm default constructor called" << std::endl;
 }
 
-// RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& obj)
-// {
-//     std::cout << "RobotomyRequestForm copy constructor called" << std::endl;
-//     *this = obj;
-// }
-
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : target(target)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& obj) : AForm("RobotomyRequestForm", 72, 45)
 {
+    this->target = obj.target;
+    std::cout << "RobotomyRequestForm copy constructor called" << std::endl;
+}
+
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("RobotomyRequestForm", 72, 45)
+{
+    this->target = target;
     std::cout << "RobotomyRequestForm constructor called" << std::endl;
-    this->isSigned = 0;
-    this->gradeToSign = 72;
-    this-> gradeToExecute = 45;
-    // if (gradeToSign > 150 || gradeToExecute > 150)
-    //     throw GradeTooLowException();
-    // else if (gradeToSign < 1 || gradeToExecute < 1)
-    //     throw GradeTooHighException();
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
@@ -31,17 +23,16 @@ RobotomyRequestForm::~RobotomyRequestForm()
     std::cout << "RobotomyRequestForm deconstructor called" << std::endl;
 }
 
-// RobotomyRequestForm&  RobotomyRequestForm::operator=(const RobotomyRequestForm& obj)
-// {
-//     std::cout << "RobotomyRequestForm copy assignment operator called" << std::endl;
-//     if (this != &obj)
-//     {
-//         this->name = obj.name + "_copy";
-//         this->isSigned = obj.isSigned;
-//         this->gradeToSign = obj.gradeToSign; // can't copy because it's constant...
-//     }
-//     return (*this);
-// }
+RobotomyRequestForm&  RobotomyRequestForm::operator=(const RobotomyRequestForm& obj)
+{
+    std::cout << "RobotomyRequestForm copy assignment operator called" << std::endl;
+    if (this != &obj)
+    {
+        this->target = obj.target;
+        this->isSigned = obj.isSigned;
+    }
+    return (*this);
+}
 
 int    RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {

@@ -1,29 +1,21 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : target("PresidentialPardonForm_target")
+PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", 25, 5)
 {
-    this->isSigned = 0;
-    this->gradeToSign = 25;
-    this-> gradeToExecute = 5;
+    this->target = "pardon_target";
     std::cout << "PresidentialPardonForm default constructor called" << std::endl;
 }
 
-// PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& obj)
-// {
-//     std::cout << "PresidentialPardonForm copy constructor called" << std::endl;
-//     *this = obj;
-// }
-
-PresidentialPardonForm::PresidentialPardonForm(std::string target) : target(target)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& obj)  : AForm("PresidentialPardonForm", 25, 5)
 {
+    this->target = obj.target;
+    std::cout << "PresidentialPardonForm copy constructor called" << std::endl;
+}
+
+PresidentialPardonForm::PresidentialPardonForm(std::string target)  : AForm("PresidentialPardonForm", 25, 5)
+{
+    this->target = target;
     std::cout << "PresidentialPardonForm constructor called" << std::endl;
-    this->isSigned = 0;
-    this->gradeToSign = 25;
-    this-> gradeToExecute = 5;
-    // if (gradeToSign > 150 || gradeToExecute > 150)
-    //     throw GradeTooLowException();
-    // else if (gradeToSign < 1 || gradeToExecute < 1)
-    //     throw GradeTooHighException();
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
@@ -31,17 +23,16 @@ PresidentialPardonForm::~PresidentialPardonForm()
     std::cout << "PresidentialPardonForm deconstructor called" << std::endl;
 }
 
-// PresidentialPardonForm&  PresidentialPardonForm::operator=(const PresidentialPardonForm& obj)
-// {
-//     std::cout << "PresidentialPardonForm copy assignment operator called" << std::endl;
-//     if (this != &obj)
-//     {
-//         this->name = obj.name + "_copy";
-//         this->isSigned = obj.isSigned;
-//         this->gradeToSign = obj.gradeToSign; // can't copy because it's constant...
-//     }
-//     return (*this);
-// }
+PresidentialPardonForm&  PresidentialPardonForm::operator=(const PresidentialPardonForm& obj)
+{
+    std::cout << "PresidentialPardonForm copy assignment operator called" << std::endl;
+    if (this != &obj)
+    {
+        this->target = obj.target;
+        this->isSigned = obj.isSigned;
+    }
+    return (*this);
+}
 
 int    PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {

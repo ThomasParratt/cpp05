@@ -143,10 +143,14 @@ int main(void)
     std::cout << std::endl << "-----INTERN TEST----" << std::endl << std::endl;
     try
     {
-        Intern  someRandomIntern;
-        AForm*  rrf;
+        Bureaucrat  tom("Tom", 2);
+        Intern      someRandomIntern;
+        AForm*      rrf;
         
         rrf = someRandomIntern.makeForm("RobotomyRequestForm", "Bender");
+        rrf->beSigned(tom);
+        tom.executeForm(*rrf);
+        delete rrf;
     }
     catch(const std::exception& e)
     {

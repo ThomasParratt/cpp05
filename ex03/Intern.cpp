@@ -28,29 +28,33 @@ Intern::~Intern()
 //     return (*this);
 // }
 
-AForm   *makeShrubberyCreationForm(std::string target)
+AForm   *Intern::makeShrubberyCreationForm(std::string target)
 {
-
+    return (new ShrubberyCreationForm(target));
 }
 
-AForm   *makeRobotomyRequestForm(std::string target)
+AForm   *Intern::makeRobotomyRequestForm(std::string target)
 {
-
+    return (new RobotomyRequestForm(target));
 }
 
-AForm   *makePresidentialPardonForm(std::string target)
+AForm   *Intern::makePresidentialPardonForm(std::string target)
 {
-    
+    return (new PresidentialPardonForm(target));
 }
 
 AForm    *Intern::makeForm(std::string form, std::string target)
 {
-    if (form == "ShrubberyCreationForm")
-        makeShrubberyCreationForm(target);
-    if (form == "RobotomyCreationForm")
-        makeRobotomyRequestForm(target);
-    if (form == "PresidentialPardonForm")
-        makePresidentialPardonForm(target);
     std::cout << "Intern creates " << form << " for " << target << std::endl;
-    //return (signed_form); //This should return a pointer to the signed form
+    if (form == "ShrubberyCreationForm")
+        return (makeShrubberyCreationForm(target));
+    else if (form == "RobotomyRequestForm")
+        return (makeRobotomyRequestForm(target));
+    else if (form == "PresidentialPardonForm")
+        return (makePresidentialPardonForm(target));
+    else
+    {
+        std::cout << "Form does not exist" << std::endl;
+        return (0);
+    }
 }

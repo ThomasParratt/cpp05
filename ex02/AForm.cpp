@@ -59,7 +59,7 @@ void    AForm::beSigned(Bureaucrat& obj)
     if (obj.getGrade() <= this->gradeToSign)
         this->isSigned = 1;
     else
-        GradeTooLowException();
+        throw GradeTooLowException();
 }
 
 void    AForm::signForm(Bureaucrat& obj)

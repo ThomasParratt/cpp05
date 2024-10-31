@@ -2,23 +2,23 @@
 
 Intern::Intern()
 {
-    std::cout << "Intern default constructor called" << std::endl;
+    //std::cout << "Intern default constructor called" << std::endl;
 }
 
 Intern::Intern(const Intern& obj)
 {
-    std::cout << "Intern copy constructor called" << std::endl;
+    //std::cout << "Intern copy constructor called" << std::endl;
     *this = obj;
 }
 
 Intern::~Intern()
 {
-    std::cout << "Intern deconstructor called" << std::endl;
+    //std::cout << "Intern deconstructor called" << std::endl;
 }
 
 Intern&  Intern::operator=(const Intern& obj)
 {
-    std::cout << "Intern copy assignment operator called" << std::endl;
+    //std::cout << "Intern copy assignment operator called" << std::endl;
     if (this != &obj) {}
     return (*this);
 }

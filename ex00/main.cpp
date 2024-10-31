@@ -2,6 +2,30 @@
 
 int main(void)
 {
+    std::cout << std::endl << "-----GRADE TOO LOW AT CONSTRUCTION-----" << std::endl << std::endl;
+    try
+    {
+        Bureaucrat  tom("Tom", 151);
+        std::cout << tom << std::endl;
+        tom.decrementGrade();
+        std::cout << tom << std::endl;
+    }
+    catch (std::exception & e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    std::cout << std::endl << "-----GRADE TOO HIGH AT CONSTRUCTION-----" << std::endl << std::endl;
+    try
+    {
+        Bureaucrat  tom("Tom", 0);
+        std::cout << tom << std::endl;
+        tom.decrementGrade();
+        std::cout << tom << std::endl;
+    }
+    catch (std::exception & e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
     std::cout << std::endl << "-----DECREMENT GRADE FROM 150 to 151-----" << std::endl << std::endl;
     try
     {

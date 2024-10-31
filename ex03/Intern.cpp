@@ -49,7 +49,7 @@ AForm    *Intern::makeForm(std::string form, std::string target)
         return (makePresidentialPardonForm(target));
     else
     {
-        std::cout << "Form does not exist" << std::endl;
+        std::cout << "Form " << form << " does not exist" << std::endl;
         return (0);
     }
 }

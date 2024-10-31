@@ -6,32 +6,58 @@
 
 int main(void)
 {
-    std::cout << std::endl << "-----TRYING TO EXECUTE USING executeForm()----" << std::endl << std::endl;
+    std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO SIGN SHRUBBERY----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 146);
-        //Bureaucrat  b2("b1", 137);
 
         std::cout << b1 << std::endl;
-        //std::cout << b2 << std::endl;
 
         ShrubberyCreationForm   shrub("home");
-        // RobotomyRequestForm     robo("Bender");
-        // PresidentialPardonForm  pardon("Bill");
 
+        std::cout << shrub << std::endl;
         shrub.beSigned(b1);
+        std::cout << shrub << std::endl;
         shrub.signForm(b1);
         b1.executeForm(shrub);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO EXECUTE SHRUBBERY----" << std::endl << std::endl;
+    try
+    {
+        Bureaucrat  b1("b1", 145);
 
-        // shrub.beSigned(b2);
-        // shrub.signForm(b2);
-        // b2.executeForm(shrub);
+        std::cout << b1 << std::endl;
 
-        // robo.beSigned(tom);
-        // tom.executeForm(robo);
+        ShrubberyCreationForm   shrub("home");
 
-        // pardon.beSigned(tom);
-        // tom.executeForm(pardon);
+        std::cout << shrub << std::endl;
+        shrub.beSigned(b1);
+        std::cout << shrub << std::endl;
+        shrub.signForm(b1);
+        b1.executeForm(shrub);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    std::cout << std::endl << "-----EXECUTE SHRUBBERY----" << std::endl << std::endl;
+    try
+    {
+        Bureaucrat  b1("b1", 137);
+
+        std::cout << b1 << std::endl;
+
+        ShrubberyCreationForm   shrub("home");
+
+        std::cout << shrub << std::endl;
+        shrub.beSigned(b1);
+        std::cout << shrub << std::endl;
+        shrub.signForm(b1);
+        b1.executeForm(shrub);
     }
     catch(const std::exception& e)
     {

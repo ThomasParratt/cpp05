@@ -13,9 +13,9 @@ class Intern
 
     public:
         Intern();
-        //Intern(const AForm& obj);
+        Intern(const Intern& obj);
         ~Intern();
-        //Intern&  operator=(const Intern& obj);
+        Intern&  operator=(const Intern& obj);
         
         AForm   *makeShrubberyCreationForm(std::string target);
         AForm   *makeRobotomyRequestForm(std::string target);

@@ -56,10 +56,13 @@ int     Form::getGradeToExecute() const
 
 void    Form::beSigned(Bureaucrat& obj)
 {
-    if (obj.getGrade() < this->gradeToSign)
+    if (obj.getGrade() <= this->gradeToSign)
         this->isSigned = true;
     else
+    {
+        std::cout << "Cannot update form status" << std::endl;
         GradeTooLowException();
+    }
 }
 
 void    Form::signForm(Bureaucrat& obj)
@@ -67,7 +70,7 @@ void    Form::signForm(Bureaucrat& obj)
     if (this->isSigned)
         std::cout << obj.getName() << " signed " << this->name << std::endl;
     else
-        std::cout << obj.getName() << " couldn't sign " << this->name << " because...GIVE REASON" << std::endl;
+        std::cout << obj.getName() << " couldn't sign " << this->name << " because of incorrect form status" << std::endl;
 }
 
 const char* Form::GradeTooHighException::what() const noexcept

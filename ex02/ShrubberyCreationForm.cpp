@@ -56,7 +56,7 @@ int    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     else
     {
         if (this->isSigned == false)
-            std::cout << "Form is not signed, cannot execute" << std::endl;
+            std::cout << "Incorrect form status, cannot execute" << std::endl;
         if (executor.getGrade() > 137)
             throw GradeTooLowException();
         return (1);

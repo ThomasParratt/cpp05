@@ -38,18 +38,24 @@ AForm   *Intern::makePresidentialPardonForm(std::string target)
     return (new PresidentialPardonForm(target));
 }
 
+// AForm    *Intern::makeForm(std::string form, std::string target)
+// {
+//     std::cout << "Intern creates " << form << " for " << target << std::endl;
+//     if (form == "ShrubberyCreationForm")
+//         return (makeShrubberyCreationForm(target));
+//     else if (form == "RobotomyRequestForm")
+//         return (makeRobotomyRequestForm(target));
+//     else if (form == "PresidentialPardonForm")
+//         return (makePresidentialPardonForm(target));
+//     else
+//     {
+//         std::cout << "Form " << form << " does not exist" << std::endl;
+//         return (0);
+//     }
+// }
+
 AForm    *Intern::makeForm(std::string form, std::string target)
 {
-    std::cout << "Intern creates " << form << " for " << target << std::endl;
-    if (form == "ShrubberyCreationForm")
-        return (makeShrubberyCreationForm(target));
-    else if (form == "RobotomyRequestForm")
-        return (makeRobotomyRequestForm(target));
-    else if (form == "PresidentialPardonForm")
-        return (makePresidentialPardonForm(target));
-    else
-    {
-        std::cout << "Form " << form << " does not exist" << std::endl;
-        return (0);
-    }
+    std::string         forms[3] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
+    function_pointer    functions[3] = {&Intern::makeShrubberyCreationForm, &Intern::makeRobotomyRequestForm, &Intern::makePresidentialPardonForm};
 }

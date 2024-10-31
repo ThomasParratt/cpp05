@@ -23,4 +23,6 @@ class Intern
         AForm   *makeForm(std::string form, std::string target);
 };
 
+typedef AForm (Intern::*function_pointer)();
+
 #endif

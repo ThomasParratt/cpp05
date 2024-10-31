@@ -3,29 +3,29 @@
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 145, 137)
 {
     this->target = "shrubbery_target";
-    std::cout << "ShrubberyCreationForm default constructor called" << std::endl;
+    //std::cout << "ShrubberyCreationForm default constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& obj) : AForm("ShrubberyCreationForm", 145, 137)
 {
     this->target = obj.target;
-    std::cout << "ShrubberyCreationForm copy constructor called" << std::endl;
+    //std::cout << "ShrubberyCreationForm copy constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("ShrubberyCreationForm", 145, 137)
 {
     this->target = target;
-    std::cout << "ShrubberyCreationForm constructor called" << std::endl;
+    //std::cout << "ShrubberyCreationForm constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-    std::cout << "ShrubberyCreationForm deconstructor called" << std::endl;
+    //std::cout << "ShrubberyCreationForm deconstructor called" << std::endl;
 }
 
 ShrubberyCreationForm&  ShrubberyCreationForm::operator=(const ShrubberyCreationForm& obj)
 {
-    std::cout << "ShrubberyCreationForm copy assignment operator called" << std::endl;
+    //std::cout << "ShrubberyCreationForm copy assignment operator called" << std::endl;
     if (this != &obj)
     {
         this->target = obj.target;

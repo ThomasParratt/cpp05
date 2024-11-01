@@ -21,9 +21,8 @@ int main(void)
             shrub = someRandomIntern.makeForm("WrongForm", "home");
         
             std::cout << *shrub << std::endl;
-            shrub->beSigned(b1);
+            b1.signForm(*shrub);
             std::cout << *shrub << std::endl;
-            shrub->signForm(b1);
             b1.executeForm(*shrub);
             delete shrub;
         }
@@ -46,9 +45,8 @@ int main(void)
             shrub = someRandomIntern.makeForm("ShrubberyCreationForm", "home");
 
             std::cout << *shrub << std::endl;
-            shrub->beSigned(b1);
+            b1.signForm(*shrub);
             std::cout << *shrub << std::endl;
-            shrub->signForm(b1);
             b1.executeForm(*shrub);
             delete shrub;
         }
@@ -71,9 +69,8 @@ int main(void)
             shrub = someRandomIntern.makeForm("ShrubberyCreationForm", "home");
 
             std::cout << *shrub << std::endl;
-            shrub->beSigned(b1);
+            b1.signForm(*shrub);
             std::cout << *shrub << std::endl;
-            shrub->signForm(b1);
             b1.executeForm(*shrub);
             delete shrub;
         }
@@ -96,9 +93,8 @@ int main(void)
             shrub = someRandomIntern.makeForm("ShrubberyCreationForm", "home");
 
             std::cout << *shrub << std::endl;
-            shrub->beSigned(b1);
+            b1.signForm(*shrub);
             std::cout << *shrub << std::endl;
-            shrub->signForm(b1);
             b1.executeForm(*shrub);
             delete shrub;
         }
@@ -121,9 +117,8 @@ int main(void)
             robotomy = someRandomIntern.makeForm("RobotomyRequestForm", "Bender");
 
             std::cout << *robotomy << std::endl;
-            robotomy->beSigned(b1);
+            b1.signForm(*robotomy);
             std::cout << *robotomy << std::endl;
-            robotomy->signForm(b1);
             b1.executeForm(*robotomy);
             delete robotomy;
         }
@@ -146,9 +141,8 @@ int main(void)
             robotomy = someRandomIntern.makeForm("RobotomyRequestForm", "Bender");
 
             std::cout << *robotomy << std::endl;
-            robotomy->beSigned(b1);
+            b1.signForm(*robotomy);
             std::cout << *robotomy << std::endl;
-            robotomy->signForm(b1);
             b1.executeForm(*robotomy);
             delete robotomy;
         }
@@ -171,9 +165,8 @@ int main(void)
             robotomy = someRandomIntern.makeForm("RobotomyRequestForm", "Bender");
 
             std::cout << *robotomy << std::endl;
-            robotomy->beSigned(b1);
+            b1.signForm(*robotomy);
             std::cout << *robotomy << std::endl;
-            robotomy->signForm(b1);
             b1.executeForm(*robotomy);
             delete robotomy;
         }
@@ -196,9 +189,8 @@ int main(void)
             pardon = someRandomIntern.makeForm("PresidentialPardonForm", "Bill");
 
             std::cout << *pardon << std::endl;
-            pardon->beSigned(b1);
+            b1.signForm(*pardon);
             std::cout << *pardon << std::endl;
-            pardon->signForm(b1);
             b1.executeForm(*pardon);
             delete pardon;
         }
@@ -221,9 +213,8 @@ int main(void)
             pardon = someRandomIntern.makeForm("PresidentialPardonForm", "Bill");
 
             std::cout << *pardon << std::endl;
-            pardon->beSigned(b1);
+            b1.signForm(*pardon);
             std::cout << *pardon << std::endl;
-            pardon->signForm(b1);
             b1.executeForm(*pardon);
             delete pardon;
         }
@@ -246,9 +237,8 @@ int main(void)
             pardon = someRandomIntern.makeForm("PresidentialPardonForm", "Bill");
 
             std::cout << *pardon << std::endl;
-            pardon->beSigned(b1);
+            b1.signForm(*pardon);
             std::cout << *pardon << std::endl;
-            pardon->signForm(b1);
             b1.executeForm(*pardon);
             delete pardon;
         }

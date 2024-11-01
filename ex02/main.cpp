@@ -16,9 +16,8 @@ int main(void)
         ShrubberyCreationForm   shrub("home");
 
         std::cout << shrub << std::endl;
-        shrub.beSigned(b1);
+        b1.signForm(shrub);
         std::cout << shrub << std::endl;
-        shrub.signForm(b1);
         b1.executeForm(shrub);
     }
     catch(const std::exception& e)
@@ -35,9 +34,8 @@ int main(void)
         ShrubberyCreationForm   shrub("home");
 
         std::cout << shrub << std::endl;
-        shrub.beSigned(b1);
+        b1.signForm(shrub);
         std::cout << shrub << std::endl;
-        shrub.signForm(b1);
         b1.executeForm(shrub);
     }
     catch(const std::exception& e)
@@ -54,9 +52,8 @@ int main(void)
         ShrubberyCreationForm   shrub("home");
 
         std::cout << shrub << std::endl;
-        shrub.beSigned(b1);
+        b1.signForm(shrub);
         std::cout << shrub << std::endl;
-        shrub.signForm(b1);
         b1.executeForm(shrub);
     }
     catch(const std::exception& e)
@@ -73,9 +70,8 @@ int main(void)
         RobotomyRequestForm   robotomy("Bender");
 
         std::cout << robotomy << std::endl;
-        robotomy.beSigned(b1);
+        b1.signForm(robotomy);
         std::cout << robotomy << std::endl;
-        robotomy.signForm(b1);
         b1.executeForm(robotomy);
     }
     catch(const std::exception& e)
@@ -92,9 +88,8 @@ int main(void)
         RobotomyRequestForm   robotomy("Bender");
 
         std::cout << robotomy << std::endl;
-        robotomy.beSigned(b1);
+        b1.signForm(robotomy);
         std::cout << robotomy << std::endl;
-        robotomy.signForm(b1);
         b1.executeForm(robotomy);
     }
     catch(const std::exception& e)
@@ -111,9 +106,8 @@ int main(void)
         RobotomyRequestForm   robotomy("Bender");
 
         std::cout << robotomy << std::endl;
-        robotomy.beSigned(b1);
+        b1.signForm(robotomy);
         std::cout << robotomy << std::endl;
-        robotomy.signForm(b1);
         b1.executeForm(robotomy);
     }
     catch(const std::exception& e)
@@ -130,9 +124,8 @@ int main(void)
         PresidentialPardonForm   pardon("Bill");
 
         std::cout << pardon << std::endl;
-        pardon.beSigned(b1);
+        b1.signForm(pardon);
         std::cout << pardon << std::endl;
-        pardon.signForm(b1);
         b1.executeForm(pardon);
     }
     catch(const std::exception& e)
@@ -149,9 +142,8 @@ int main(void)
         PresidentialPardonForm   pardon("Bill");
 
         std::cout << pardon << std::endl;
-        pardon.beSigned(b1);
+        b1.signForm(pardon);
         std::cout << pardon << std::endl;
-        pardon.signForm(b1);
         b1.executeForm(pardon);
     }
     catch(const std::exception& e)
@@ -168,9 +160,8 @@ int main(void)
         PresidentialPardonForm   pardon("Bill");
 
         std::cout << pardon << std::endl;
-        pardon.beSigned(b1);
+        b1.signForm(pardon);
         std::cout << pardon << std::endl;
-        pardon.signForm(b1);
         b1.executeForm(pardon);
     }
     catch(const std::exception& e)

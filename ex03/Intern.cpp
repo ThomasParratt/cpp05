@@ -38,22 +38,6 @@ AForm   *Intern::makePresidentialPardonForm(std::string target)
     return (new PresidentialPardonForm(target));
 }
 
-// AForm    *Intern::makeForm(std::string form, std::string target)
-// {
-//     std::cout << "Intern creates " << form << " for " << target << std::endl;
-//     if (form == "ShrubberyCreationForm")
-//         return (makeShrubberyCreationForm(target));
-//     else if (form == "RobotomyRequestForm")
-//         return (makeRobotomyRequestForm(target));
-//     else if (form == "PresidentialPardonForm")
-//         return (makePresidentialPardonForm(target));
-//     else
-//     {
-//         std::cout << "Form " << form << " does not exist" << std::endl;
-//         return (0);
-//     }
-// }
-
 AForm    *Intern::makeForm(std::string form, std::string target)
 {
     std::string         forms[3] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
@@ -66,5 +50,10 @@ AForm    *Intern::makeForm(std::string form, std::string target)
             return(this->*functions[i])(target);
         }
     }
-    return (0);
+    throw WrongFormException();
+}
+
+const char* Intern::WrongFormException::what() const noexcept
+{
+    return ("Form name does not exist!");
 }

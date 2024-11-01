@@ -21,6 +21,12 @@ class Intern
         AForm   *makeRobotomyRequestForm(std::string target);
         AForm   *makePresidentialPardonForm(std::string target);
         AForm   *makeForm(std::string form, std::string target);
+
+        class WrongFormException : public std::exception
+        {
+            public:
+                const char* what() const noexcept override;
+        };
 };
 
 typedef AForm *(Intern::*function_pointer)(std::string target);

@@ -11,8 +11,7 @@ int main(void)
 
         std::cout << tom << std::endl;
         std::cout << form_1 << std::endl;
-        form_1.beSigned(tom);
-        form_1.signForm(tom);
+        tom.signForm(form_1);
         std::cout << form_1 << std::endl;
     }
     catch (std::exception & e)
@@ -27,8 +26,7 @@ int main(void)
 
         std::cout << tom << std::endl;
         std::cout << form_1 << std::endl;
-        form_1.beSigned(tom);
-        form_1.signForm(tom);
+        tom.signForm(form_1);
         std::cout << form_1 << std::endl;
     }
     catch (std::exception & e)
@@ -43,8 +41,7 @@ int main(void)
 
         std::cout << tom << std::endl;
         std::cout << form_1 << std::endl;
-        form_1.beSigned(tom);
-        form_1.signForm(tom);
+        tom.signForm(form_1);
         std::cout << form_1 << std::endl;
     }
     catch (std::exception & e)
@@ -59,8 +56,7 @@ int main(void)
 
         std::cout << tom << std::endl;
         std::cout << form_1 << std::endl;
-        form_1.beSigned(tom);
-        form_1.signForm(tom);
+        tom.signForm(form_1);
         std::cout << form_1 << std::endl;
     }
     catch (std::exception & e)
@@ -75,8 +71,7 @@ int main(void)
 
         std::cout << tom << std::endl;
         std::cout << form_1 << std::endl;
-        form_1.beSigned(tom);
-        form_1.signForm(tom);
+        tom.signForm(form_1);
         std::cout << form_1 << std::endl;
     }
     catch (std::exception & e)
@@ -91,8 +86,7 @@ int main(void)
 
         std::cout << tom << std::endl;
         std::cout << form_1 << std::endl;
-        form_1.beSigned(tom);
-        form_1.signForm(tom);
+        tom.signForm(form_1);
         std::cout << form_1 << std::endl;
     }
     catch (std::exception & e)
@@ -107,8 +101,7 @@ int main(void)
 
         std::cout << tom << std::endl;
         std::cout << form_1 << std::endl;
-        form_1.beSigned(tom);
-        form_1.signForm(tom);
+        tom.signForm(form_1);
         std::cout << form_1 << std::endl;
     }
     catch (std::exception & e)

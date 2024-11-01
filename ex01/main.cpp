@@ -87,7 +87,7 @@ int main(void)
     try
     {
         Bureaucrat  tom("Tom", 51);
-        Form    form_1("Form_1", 50, 60);
+        Form    form_1("Form_1", 50, 40);
 
         std::cout << tom << std::endl;
         std::cout << form_1 << std::endl;

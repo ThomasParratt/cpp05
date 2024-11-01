@@ -29,21 +29,20 @@ RobotomyRequestForm&  RobotomyRequestForm::operator=(const RobotomyRequestForm& 
     if (this != &obj)
     {
         this->target = obj.target;
-        this->isSigned = obj.isSigned;
     }
     return (*this);
 }
 
 int    RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-    if (this->isSigned == 1 && executor.getGrade() <= 45)
+    if (this->getIsSigned() == 1 && executor.getGrade() <= 45)
     {
         std::cout << "Drill, drill! " << this->target << " has been successfully robotomized" << std::endl;
         return (0);
     }
     else
     {
-        if (this->isSigned == 0)
+        if (this->getIsSigned() == 0)
             std::cout << "Form is not signed, cannot execute" << std::endl;
         if (executor.getGrade() > 45)
             throw GradeTooLowException();

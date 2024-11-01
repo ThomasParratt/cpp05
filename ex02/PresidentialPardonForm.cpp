@@ -29,21 +29,20 @@ PresidentialPardonForm&  PresidentialPardonForm::operator=(const PresidentialPar
     if (this != &obj)
     {
         this->target = obj.target;
-        this->isSigned = obj.isSigned;
     }
     return (*this);
 }
 
 int    PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-    if (this->isSigned == 1 && executor.getGrade() <= 5)
+    if (this->getIsSigned() == 1 && executor.getGrade() <= 5)
     {
         std::cout << this->target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
         return (0);
     }
     else
     {
-        if (this->isSigned == 0)
+        if (this->getIsSigned() == 0)
             std::cout << "Form is not signed, cannot execute" << std::endl;
         if (executor.getGrade() > 5)
             throw GradeTooLowException();

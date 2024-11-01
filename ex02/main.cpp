@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO SIGN SHRUBBERY----" << std::endl << std::endl;
+    std::cout << std::endl << "----BUREAUCRAT GRADE TOO LOW TO SIGN SHRUBBERY----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 146);
@@ -25,7 +25,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO EXECUTE SHRUBBERY----" << std::endl << std::endl;
+    std::cout << std::endl << "----BUREAUCRAT GRADE TOO LOW TO EXECUTE SHRUBBERY----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 145);
@@ -44,7 +44,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----EXECUTE SHRUBBERY----" << std::endl << std::endl;
+    std::cout << std::endl << "----EXECUTE SHRUBBERY----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 137);
@@ -63,7 +63,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO SIGN ROBOTOMY----" << std::endl << std::endl;
+    std::cout << std::endl << "----BUREAUCRAT GRADE TOO LOW TO SIGN ROBOTOMY----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 73);
@@ -82,7 +82,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO EXECUTE ROBOTOMY----" << std::endl << std::endl;
+    std::cout << std::endl << "----BUREAUCRAT GRADE TOO LOW TO EXECUTE ROBOTOMY----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 72);
@@ -101,7 +101,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----EXECUTE ROBOTOMY----" << std::endl << std::endl;
+    std::cout << std::endl << "----EXECUTE ROBOTOMY----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 45);
@@ -120,7 +120,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO SIGN PARDON----" << std::endl << std::endl;
+    std::cout << std::endl << "----BUREAUCRAT GRADE TOO LOW TO SIGN PARDON----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 26);
@@ -139,7 +139,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO EXECUTE PARDON----" << std::endl << std::endl;
+    std::cout << std::endl << "----BUREAUCRAT GRADE TOO LOW TO EXECUTE PARDON----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 25);
@@ -158,7 +158,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----EXECUTE PARDON----" << std::endl << std::endl;
+    std::cout << std::endl << "----EXECUTE PARDON----" << std::endl << std::endl;
     try
     {
         Bureaucrat  b1("b1", 5);

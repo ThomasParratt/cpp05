@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    std::cout << std::endl << "-----SIGN FORM-----" << std::endl << std::endl;
+    std::cout << std::endl << "----SIGN FORM----" << std::endl << std::endl;
     try
     {
         Bureaucrat  tom("Tom", 20);
@@ -19,7 +19,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----GRADE TO SIGN TOO LOW-----" << std::endl << std::endl;
+    std::cout << std::endl << "----GRADE TO SIGN TOO LOW----" << std::endl << std::endl;
     try
     {
         Bureaucrat  tom("Tom", 20);
@@ -35,7 +35,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----FORM GRADE TO SIGN TOO HIGH-----" << std::endl << std::endl;
+    std::cout << std::endl << "----FORM GRADE TO SIGN TOO HIGH----" << std::endl << std::endl;
     try
     {
         Bureaucrat  tom("Tom", 20);
@@ -51,7 +51,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----FORM GRADE TO EXECUTE TOO LOW-----" << std::endl << std::endl;
+    std::cout << std::endl << "----FORM GRADE TO EXECUTE TOO LOW----" << std::endl << std::endl;
     try
     {
         Bureaucrat  tom("Tom", 20);
@@ -67,7 +67,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----FORM GRADE TO EXECUTE TOO HIGH-----" << std::endl << std::endl;
+    std::cout << std::endl << "----FORM GRADE TO EXECUTE TOO HIGH----" << std::endl << std::endl;
     try
     {
         Bureaucrat  tom("Tom", 20);
@@ -83,7 +83,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----BUREAUCRAT GRADE TO SIGN TOO LOW-----" << std::endl << std::endl;
+    std::cout << std::endl << "----BUREAUCRAT GRADE TO SIGN TOO LOW----" << std::endl << std::endl;
     try
     {
         Bureaucrat  tom("Tom", 51);
@@ -99,7 +99,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----BUREAUCRAT GRADE TO EXECUTE TOO LOW-----" << std::endl << std::endl;
+    std::cout << std::endl << "----BUREAUCRAT GRADE TO EXECUTE TOO LOW----" << std::endl << std::endl;
     try
     {
         Bureaucrat  tom("Tom", 41);

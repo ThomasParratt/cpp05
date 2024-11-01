@@ -24,6 +24,7 @@ int main(void)
     // {
     //     std::cerr << e.what() << std::endl;
     // }
+    
     std::cout << std::endl << "-----TRYING TO CREATE NON-EXISTENT FORM----" << std::endl << std::endl;
     try
     {
@@ -45,27 +46,27 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO SIGN SHRUBBERY----" << std::endl << std::endl;
-    try
-    {
-        Bureaucrat  b1("b1", 146);
-        Intern      someRandomIntern;
-        AForm*      shrub;
+    // std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO SIGN SHRUBBERY----" << std::endl << std::endl;
+    // try
+    // {
+    //     Bureaucrat  b1("b1", 146);
+    //     Intern      someRandomIntern;
+    //     AForm*      shrub;
 
-        std::cout << b1 << std::endl;
+    //     std::cout << b1 << std::endl;
 
-        shrub = someRandomIntern.makeForm("ShrubberyCreationForm", "home");
+    //     shrub = someRandomIntern.makeForm("ShrubberyCreationForm", "home");
 
-        std::cout << *shrub << std::endl;
-        shrub->beSigned(b1);
-        std::cout << *shrub << std::endl;
-        shrub->signForm(b1);
-        b1.executeForm(*shrub);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
+    //     std::cout << *shrub << std::endl;
+    //     shrub->beSigned(b1);
+    //     std::cout << *shrub << std::endl;
+    //     shrub->signForm(b1);
+    //     b1.executeForm(*shrub);
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << std::endl;
+    // }
     // std::cout << std::endl << "-----BUREAUCRAT GRADE TOO LOW TO EXECUTE SHRUBBERY----" << std::endl << std::endl;
     // try
     // {

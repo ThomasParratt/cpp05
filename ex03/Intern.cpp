@@ -58,4 +58,13 @@ AForm    *Intern::makeForm(std::string form, std::string target)
 {
     std::string         forms[3] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
     function_pointer    functions[3] = {&Intern::makeShrubberyCreationForm, &Intern::makeRobotomyRequestForm, &Intern::makePresidentialPardonForm};
+
+    for (int i = 0; i < 3; i++)
+    {
+        if (form == forms[i])
+        {
+            return(this->*functions[i])(target);
+        }
+    }
+    return (0);
 }

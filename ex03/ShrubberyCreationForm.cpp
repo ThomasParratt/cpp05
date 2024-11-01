@@ -29,14 +29,13 @@ ShrubberyCreationForm&  ShrubberyCreationForm::operator=(const ShrubberyCreation
     if (this != &obj)
     {
         this->target = obj.target;
-        this->isSigned = obj.isSigned;
     }
     return (*this);
 }
 
 int    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-    if (this->isSigned == true && executor.getGrade() <= 137)
+    if (this->getIsSigned() == true && executor.getGrade() <= 137)
     {
         std::ofstream   file(this->target + "_shrubbery");
 
@@ -55,7 +54,7 @@ int    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     }
     else
     {
-        if (this->isSigned == false)
+        if (this->getIsSigned() == false)
             std::cout << "Incorrect form status, cannot execute" << std::endl;
         if (executor.getGrade() > 137)
             throw GradeTooLowException();

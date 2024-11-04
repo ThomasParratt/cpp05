@@ -3,21 +3,6 @@
 
 int main(void)
 {
-    std::cout << std::endl << "----SIGN FORM----" << std::endl << std::endl;
-    try
-    {
-        Bureaucrat  tom("Tom", 20);
-        Form    form_1("Form_1", 50, 50);
-
-        std::cout << tom << std::endl;
-        std::cout << form_1 << std::endl;
-        tom.signForm(form_1);
-        std::cout << form_1 << std::endl;
-    }
-    catch (std::exception & e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
     std::cout << std::endl << "----GRADE TO SIGN TOO LOW----" << std::endl << std::endl;
     try
     {
@@ -98,6 +83,21 @@ int main(void)
     {
         Bureaucrat  tom("Tom", 41);
         Form    form_1("Form_1", 50, 40);
+
+        std::cout << tom << std::endl;
+        std::cout << form_1 << std::endl;
+        tom.signForm(form_1);
+        std::cout << form_1 << std::endl;
+    }
+    catch (std::exception & e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    std::cout << std::endl << "----SIGN FORM----" << std::endl << std::endl;
+    try
+    {
+        Bureaucrat  tom("Tom", 20);
+        Form    form_1("Form_1", 50, 50);
 
         std::cout << tom << std::endl;
         std::cout << form_1 << std::endl;

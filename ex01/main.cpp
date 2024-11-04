@@ -96,10 +96,13 @@ int main(void)
     std::cout << std::endl << "----SIGN FORM----" << std::endl << std::endl;
     try
     {
-        Bureaucrat  tom("Tom", 20);
+        Bureaucrat  tom("Tom", 51);
         Form    form_1("Form_1", 50, 50);
 
         std::cout << tom << std::endl;
+        tom.incrementGrade();
+        std::cout << tom << std::endl;
+        
         std::cout << form_1 << std::endl;
         tom.signForm(form_1);
         std::cout << form_1 << std::endl;
